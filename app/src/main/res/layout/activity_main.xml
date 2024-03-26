@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title TextView for adding a new grade -->
+    <TextView
+        android:id="@+id/textViewAddTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agrega una materia y su calificación"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText for subject name input -->
+    <EditText
+        android:id="@+id/editTextSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la asignatura"
+        android:layout_below="@id/textViewAddTitle" />
+
+    <!-- EditText for grade input -->
+    <EditText
+        android:id="@+id/editTextGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calificación"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/editTextSubject" />
+
+    <!-- Button to add the grade to the list -->
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir"
+        android:layout_below="@id/editTextGrade" />
+
+    <!-- Button to navigate to the view grades screen -->
+    <Button
+        android:id="@+id/viewGradesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Ver Materias y Calificaciones" />
+
+    <!-- ListView to display added grades -->
+    <ListView
+        android:id="@+id/listViewGrades"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonAdd"
+        android:layout_above="@id/viewGradesButton"
+        android:layout_marginTop="2dp" />
+</RelativeLayout>
